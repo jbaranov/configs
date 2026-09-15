@@ -7,33 +7,6 @@ duration = 0
 [colors]
 draw_bold_text_with_bright_colors = false
 
-[colors.bright]
-black = "0x969896"
-blue = "0xb4b7b4"
-cyan = "0xa3685a"
-green = "0x282a2e"
-magenta = "0xe0e0e0"
-red = "0xde935f"
-white = "0xffffff"
-yellow = "0x373b41"
-
-[colors.cursor]
-cursor = "0xc5c8c6"
-text = "0x1d1f21"
-
-[colors.normal]
-black = "0x1d1f21"
-blue = "0x81a2be"
-cyan = "0x8abeb7"
-green = "0xb5bd68"
-magenta = "0xb294bb"
-red = "0xcc6666"
-white = "0xc5c8c6"
-yellow = "0xf0c674"
-
-[colors.primary]
-background = "0x1d1f21"
-foreground = "0xc5c8c6"
 
 [cursor]
 style = "Block"
@@ -41,7 +14,7 @@ unfocused_hollow = true
 
 [debug]
 log_level = "OFF"
-persistent_logging = false
+persistent_logging = true
 print_events = false
 render_timer = false
 
@@ -49,7 +22,7 @@ render_timer = false
 size = 14.0
 
 [font.bold]
-family = "Iosevka Term"
+family = "IosevkaTerm Nerd Font"
 style = "Medium"
 
 [font.glyph_offset]
@@ -57,11 +30,11 @@ x = 0
 y = 0
 
 [font.italic]
-family = "Iosevka Term"
+family = "IosevkaTerm Nerd Font"
 style = "Light Italic"
 
 [font.normal]
-family = "Iosevka Term"
+family = "IosevkaTerm Nerd Font"
 style = "Light"
 
 [font.offset]
@@ -84,8 +57,8 @@ save_to_clipboard = false
 semantic_escape_chars = ",│`|:\"' ()[]{}<>"
 
 [terminal.shell]
-args = ["-l", "-c", "/usr/local/bin/tmux attach || /usr/local/bin/tmux new -s main"]
-program = "bash"
+args = ["-l", "-c", "tmux attach || tmux new -s main"]
+program = "/opt/homebrew/bin/fish"
 
 [window]
 decorations = "none"
@@ -94,9 +67,10 @@ startup_mode = "SimpleFullscreen"
 
 [window.padding]
 x = 10
-y = 5
+y = 25
 
 [general]
 live_config_reload = true
+import = ["~/.config/alacritty/themes/themes/tomorrow_night.toml"]
 
 [terminal]
